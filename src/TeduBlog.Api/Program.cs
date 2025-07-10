@@ -2,10 +2,13 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TeduBlog.Api;
 using TeduBlog.Core.Domain.Identity;
+using TeduBlog.Core.Models.Content;
 using TeduBlog.Core.SeedWorks;
 using TeduBlog.Data;
 using TeduBlog.Data.Repositories;
 using TeduBlog.Data.SeedWorks;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -62,6 +65,9 @@ foreach (var service in services)
         builder.Services.Add(new ServiceDescriptor(directInterface, service, ServiceLifetime.Scoped));
     }
 }
+
+//Auto mapper
+builder.Services.AddAutoMapper(typeof(PostInListDto));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
