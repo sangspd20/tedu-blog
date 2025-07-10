@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using static TeduBlog.Core.SeedWorks.Constants.Permissions;
+//using static TeduBlog.Core.SeedWorks.Constants.Permissions;
 
 namespace TeduBlog.Core.Domain.Identity
 {
