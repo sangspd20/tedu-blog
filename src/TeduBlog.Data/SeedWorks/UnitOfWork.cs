@@ -15,7 +15,7 @@ namespace TeduBlog.Data.SeedWorks
         public UnitOfWork(TeduBlogContext context, IMapper mapper, UserManager<AppUser> userManager)
         {
             _context = context;
-            //Posts = new PostRepository(context, mapper, userManager);
+            Posts = new PostRepository(context, mapper, userManager);
             //PostCategories = new PostCategoryRepository(context, mapper);
             //Series = new SeriesRepository(context, mapper);
             //Transactions = new TransactionRepository(context, mapper);
